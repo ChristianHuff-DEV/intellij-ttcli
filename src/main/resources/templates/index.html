@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main}">
+<body>
+<div layout:fragment="content">
+    <div class="bg-amber-400 p-2">
+        <div id="message"> Request info</div>
+    </div>
+    <div class="mb-4">
+        <button class="items-center justify-center px-6 py-2.5 textcenter text-white duration-200 bg-black border-2 border-black roundedfull inline-flex hover:bg-transparent hover:border-black hover:textblack focus:outline-none focus-visible:outline-black text-sm focusvisible:ring-black"
+                th:hx-get="@{/htmx}" hx-target="#message">
+            Click me
+        </button>
+    </div>
+</div>
+</body>
+</html>
